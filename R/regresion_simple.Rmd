@@ -1,0 +1,36 @@
+---
+title: "Regresión Lineal Simple - High Lines"
+author: "Juan Malo"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+# Regresión Lineal - High Lines
+
+```{r}
+# Cargar librerías
+library(ggplot2)
+library(datasauRus)
+
+# Cargar datos
+datos <- datasaurus_dozen
+high_lines <- datos[datos$dataset == "high_lines", ]
+
+# Crear modelo de regresión
+modelo <- lm(y ~ x, data = high_lines)
+
+# Gráfico con línea de regresión
+ggplot(high_lines, aes(x = x, y = y)) +
+  geom_point(alpha = 0.6, color = "blue") +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linewidth = 2) +
+  labs(
+    title = "Regresión Lineal - High Lines",
+    x = "X",
+    y = "Y"
+  ) +
+  theme_minimal()
+```
