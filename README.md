@@ -56,11 +56,16 @@ El Cuarteto de Anscombe ilustra perfectamente por qué es crucial visualizar los
 Importancia-Data-Visualization/
 ├── README.md                    # Este archivo
 ├── data/                       # Conjuntos de datos utilizados
-│   └── df_anscombe.csv        # Dataset del Cuarteto de Anscombe
-├── R/                         # Código R para análisis
-│   └── [archivos .R]
-└── Python/                    # Código Python para regresión lineal
-    └── [archivos .py]
+│   ├── df_anscombe.csv        # Dataset del Cuarteto de Anscombe
+│   └── README.md              # Documentación de los datos
+├── R/                         # Código R para análisis (Datasaurus Dozen)
+│   ├── regresion_simple.Rmd   # Regresión lineal con "high_lines"
+│   └── regresion_simple.html  # Reporte HTML generado
+└── Python/                    # Código Python para regresión lineal (Anscombe)
+    ├── linear_regression_analysis.py  # Análisis del Cuarteto de Anscombe
+    ├── tests.ipynb            # Notebook de pruebas
+    ├── tests.py               # Script de pruebas
+    └── requirements.txt       # Dependencias de Python
 ```
 
 ---
@@ -68,13 +73,13 @@ Importancia-Data-Visualization/
 ## Descripción de Secciones
 
 ### 📁 Directorio `data/`
-Contiene todos los conjuntos de datos utilizados para la práctica, incluyendo el dataset del Cuarteto de Anscombe con los 13 conjuntos de datos.
+Contiene todos los conjuntos de datos utilizados para la práctica, incluyendo el dataset del Cuarteto de Anscombe con los 4 conjuntos de datos originales.
 
 ### 📁 Directorio `R/`
-Almacena el código R utilizado para mostrar y analizar los 13 conjuntos de datos del Cuarteto de Anscombe, incluyendo visualizaciones y análisis estadísticos.
+Almacena el código R utilizado para realizar regresión lineal con el dataset "high_lines" del Datasaurus Dozen, incluyendo visualizaciones y análisis estadísticos.
 
 ### 📁 Directorio `Python/`
-Contiene el código Python utilizado para realizar regresión lineal según el dataset seleccionado del Datasaurus, implementando algoritmos de machine learning y análisis estadístico.
+Contiene el código Python utilizado para realizar regresión lineal con el Cuarteto de Anscombe, implementando algoritmos de machine learning y análisis estadístico.
 
 ---
 
